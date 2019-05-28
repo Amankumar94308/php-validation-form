@@ -1,3 +1,6 @@
+
+// Validated Form using Html,CSS And PHP.
+
 <?php 
 if($_POST){
 $username=$_POST['username'];
@@ -81,7 +84,7 @@ if(empty($adrs)){
 	$adrsErr="*Enter Your Address ";
 }
 elseif(strlen($adrs)<10){
-	$adrsErr="YOur Addres is Too Short";
+	$adrsErr="Your Addres is Too Short";
 }
 else{
 	$disadrs=$adrs;
@@ -167,13 +170,12 @@ Phone<br><input id="phinput" type="number" value="<?php if(isset($_POST['contact
 Pin Code<br><input id="zipinput" type="number" value="<?php if(isset($_POST['zip'])) {echo $zip;}?>" name="zip"/><span><?php echo @$zipErr; ?></span><br><br>
 Password<br><input id="pwdinput" type="password" value="<?php if(isset($_POST['pwd'])) {echo $_POST['pwd'];}?>" name="pwd"/><span><?php echo @$pwdErr; ?></span><br><br>
 Address<br><br><textarea id="addinput" rows="2" cols="39" name="adrs"><?php if(isset($_POST['adrs'])) {echo $adrs;}?></textarea><span><?php echo @$adrsErr; ?></span><br><br>
-
 <input class="btn" type="submit" value="UPLOAD"/>
 <input class="btn" type="reset" value="CLEAR"/>
 </div>
 </form>
  <div>
- <br>
+ </br>
  <?php
  if(!isset($username)){
 	 echo "Your Info Will Appear Here...";
